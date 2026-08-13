@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css2/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center px-4 text-black relative">
+  <div class="balloon bg-pink-400 left-8 top-20"></div>
+  <div class="balloon bg-purple-400 right-10 top-28" style="animation-delay:1s"></div>
+  <div class="balloon bg-yellow-300 left-1/4 bottom-16" style="animation-delay:2s"></div>
+  <div class="balloon bg-red-400 right-1/4 bottom-20" style="animation-delay:.5s"></div>
+
+  <main class="relative z-10 w-full max-w-3xl">
+    <div class="glass rounded-[2rem] p-6 sm:p-10 text-center min-h-[560px] flex items-center justify-center">
+      <section class="step active w-full" data-step="0">
+        <p class="uppercase tracking-[.35em] text-sm text-black mb-4">A tiny surprise for you</p>
+        <h1 class="font-love text-5xl sm:text-7xl text-black drop-shadow-lg mb-6">Hey Beautiful</h1>
+        <p class="text-lg sm:text-xl text-black/90 max-w-xl mx-auto mb-8">Today is not just another day. It is the day my favorite person came into this world.</p>
+        <button onclick="nextStep()" class="bg-white text-pink-600 px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 active:scale-95 transition">Open Your Surprise 💝</button>
+      </section>
+
+      <section class="step w-full" data-step="1">
+        <h2 class="font-love text-4xl sm:text-6xl mb-5">First, catch my heart</h2>
+        <p class="mb-6 text-black/90">Click the floating heart 5 times to unlock your birthday wish.</p>
+        <div class="relative h-72 rounded-3xl bg-white/15 overflow-hidden border border-white/20" id="heartGame">
+          <button id="catchHeart" class="absolute text-5xl hover:scale-125 transition">💖</button>
+          <div class="absolute left-4 top-4 bg-white/25 px-4 py-2 rounded-full">Caught: <span id="score">0</span>/5</div>
+        </div>
+      </section>
+
+      <section class="step w-full" data-step="2">
+        <h2 class="font-love text-4xl sm:text-6xl mb-7 text-transform: uppercase;">A Gift For You</h2>
+        <p class="mb-10 text-black/90 ">Tap the gift box gently.</p>
+        <div class="gift-box" onclick="openGift(this)">
+          <div class="gift-lid"></div>
+        </div>
+        <p id="giftMessage" class="hidden mt-10 text-2xl font-semibold text-black">Inside this gift is my love, my prayers, and my forever smile for you. 🥺❤️</p>
+      </section>
+
+      <section class="step w-full" data-step="3">
+        
+        <div class="cake mb-8">
+          <div class="flame" id="flame"></div>
+          <div class="candle"></div>
+          <div class="cake-top"></div>
+          <div class="cake-base"></div>
+        </div>
+        <p class="mb-6 text-black/90">Click the candle flame to blow it out.</p>
+        <button onclick="blowCandle()" class="bg-pink-600 hover:bg-pink-700 text-black px-8 py-4 rounded-full font-bold shadow-xl transition">Blow Candle 🕯️</button>
+      </section>
+
+      <section class="step w-full" data-step="4">
+        <p class="uppercase tracking-[.35em] text-sm text-pink-100 mb-4">Final Message</p>
+        <h2 class="font-love text-5xl sm:text-7xl mb-6">Happy Birthday My Love 🎂</h2>
+        <div class="max-w-2xl mx-auto text-left bg-white/20 rounded-3xl p-6 border border-white/25">
+          <p class="text-lg leading-8 text-black/95">
+            On your special day, I just want to say that you are one of the most beautiful blessings in my life. Your smile makes my world softer, your presence makes my heart peaceful, and your love makes every day feel special.
+          </p>
+          <p class="text-lg leading-8 text-black/95 mt-4">
+            May Allah bless you with endless happiness, health, success, love, and every dream your heart silently prays for. I am so lucky to have you. ❤️
+          </p>
+        </div>
+        <button onclick="restartWish()" class="mt-8 bg-white text-pink-600 px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 active:scale-95 transition">Replay Magic ✨</button>
+      </section>
+    </div>
+  </main>
+
+<script src="js2/hbd.js"></script>
+
+<h1>jhk</h1>
+</body>
+</html>
